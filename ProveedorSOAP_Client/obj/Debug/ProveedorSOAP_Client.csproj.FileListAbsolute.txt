@@ -1,0 +1,10 @@
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\bin\Debug\ProveedorSOAP_Client.exe.config
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\bin\Debug\ProveedorSOAP_Client.exe
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\bin\Debug\ProveedorSOAP_Client.pdb
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.csproj.AssemblyReference.cache
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.Form1.resources
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.Properties.Resources.resources
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.csproj.GenerateResource.cache
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.csproj.CoreCompileInputs.cache
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.exe
+C:\Users\IPRon\Desktop\SEMESTRE\9no\Servicios web\EJEMPLOS\SW\Servicio Con Base de Datos\ProveedorSOAP_Client\obj\Debug\ProveedorSOAP_Client.pdb

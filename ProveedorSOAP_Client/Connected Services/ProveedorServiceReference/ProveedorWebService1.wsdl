@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProveedor">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProveedorResult" type="tns:ArrayOfProveedor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProveedor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="proveedor" nillable="true" type="tns:proveedor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="proveedor">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerProveedorResult" type="tns:proveedor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregarProveedorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BorrarProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BorrarProveedorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProveedor" />
+  </wsdl:message>
+  <wsdl:message name="GetProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="AgregarProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:BorrarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="BorrarProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:BorrarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProveedorWebService1Soap">
+    <wsdl:operation name="GetProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de Proveedores</wsdl:documentation>
+      <wsdl:input message="tns:GetProveedorSoapIn" />
+      <wsdl:output message="tns:GetProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la un Proveedor</wsdl:documentation>
+      <wsdl:input message="tns:ObtenerProveedorSoapIn" />
+      <wsdl:output message="tns:ObtenerProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agregar un Proveedor</wsdl:documentation>
+      <wsdl:input message="tns:AgregarProveedorSoapIn" />
+      <wsdl:output message="tns:AgregarProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminar un Proveedor</wsdl:documentation>
+      <wsdl:input message="tns:BorrarProveedorSoapIn" />
+      <wsdl:output message="tns:BorrarProveedorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProveedorWebService1Soap" type="tns:ProveedorWebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProveedor">
+      <soap:operation soapAction="http://tempuri.org/GetProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <soap:operation soapAction="http://tempuri.org/ObtenerProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProveedor">
+      <soap:operation soapAction="http://tempuri.org/AgregarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProveedor">
+      <soap:operation soapAction="http://tempuri.org/BorrarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProveedorWebService1Soap12" type="tns:ProveedorWebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProveedor">
+      <soap12:operation soapAction="http://tempuri.org/GetProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarProveedor">
+      <soap12:operation soapAction="http://tempuri.org/AgregarProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarProveedor">
+      <soap12:operation soapAction="http://tempuri.org/BorrarProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProveedorWebService1">
+    <wsdl:port name="ProveedorWebService1Soap" binding="tns:ProveedorWebService1Soap">
+      <soap:address location="https://localhost:44366/ProveedorWebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProveedorWebService1Soap12" binding="tns:ProveedorWebService1Soap12">
+      <soap12:address location="https://localhost:44366/ProveedorWebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
