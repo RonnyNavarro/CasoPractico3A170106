@@ -158,6 +158,20 @@ namespace ProveedorSOAP_Client.ProveedorServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BorrarProveedor", ReplyAction="*")]
         System.Threading.Tasks.Task<bool> BorrarProveedorAsync(int id);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ActualizarProveedor", ReplyAction="*")]
+        ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse ActualizarProveedor(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ActualizarProveedor", ReplyAction="*")]
+        System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse> ActualizarProveedorAsync(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nombre del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarProveedor", ReplyAction="*")]
+        ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse ModificarProveedor(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ModificarProveedor", ReplyAction="*")]
+        System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse> ModificarProveedorAsync(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -369,6 +383,174 @@ namespace ProveedorSOAP_Client.ProveedorServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActualizarProveedorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActualizarProveedor", Namespace="http://tempuri.org/", Order=0)]
+        public ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequestBody Body;
+        
+        public ActualizarProveedorRequest() {
+        }
+        
+        public ActualizarProveedorRequest(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ActualizarProveedorRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string direccion;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string telefono;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string email;
+        
+        public ActualizarProveedorRequestBody() {
+        }
+        
+        public ActualizarProveedorRequestBody(int id, string nombre, string direccion, string telefono, string email) {
+            this.id = id;
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.telefono = telefono;
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ActualizarProveedorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ActualizarProveedorResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponseBody Body;
+        
+        public ActualizarProveedorResponse() {
+        }
+        
+        public ActualizarProveedorResponse(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ActualizarProveedorResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ActualizarProveedorResult;
+        
+        public ActualizarProveedorResponseBody() {
+        }
+        
+        public ActualizarProveedorResponseBody(bool ActualizarProveedorResult) {
+            this.ActualizarProveedorResult = ActualizarProveedorResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarProveedorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarProveedor", Namespace="http://tempuri.org/", Order=0)]
+        public ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequestBody Body;
+        
+        public ModificarProveedorRequest() {
+        }
+        
+        public ModificarProveedorRequest(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ModificarProveedorRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int id;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string direccion;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string telefono;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string email;
+        
+        public ModificarProveedorRequestBody() {
+        }
+        
+        public ModificarProveedorRequestBody(int id, string nombre, string direccion, string telefono, string email) {
+            this.id = id;
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.telefono = telefono;
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ModificarProveedorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ModificarProveedorResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponseBody Body;
+        
+        public ModificarProveedorResponse() {
+        }
+        
+        public ModificarProveedorResponse(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ModificarProveedorResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool ModificarProveedorResult;
+        
+        public ModificarProveedorResponseBody() {
+        }
+        
+        public ModificarProveedorResponseBody(bool ModificarProveedorResult) {
+            this.ModificarProveedorResult = ModificarProveedorResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProveedorWebService1SoapChannel : ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap, System.ServiceModel.IClientChannel {
     }
@@ -481,6 +663,72 @@ namespace ProveedorSOAP_Client.ProveedorServiceReference {
         
         public System.Threading.Tasks.Task<bool> BorrarProveedorAsync(int id) {
             return base.Channel.BorrarProveedorAsync(id);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap.ActualizarProveedor(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest request) {
+            return base.Channel.ActualizarProveedor(request);
+        }
+        
+        public bool ActualizarProveedor(int id, string nombre, string direccion, string telefono, string email) {
+            ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest inValue = new ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest();
+            inValue.Body = new ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.nombre = nombre;
+            inValue.Body.direccion = direccion;
+            inValue.Body.telefono = telefono;
+            inValue.Body.email = email;
+            ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse retVal = ((ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap)(this)).ActualizarProveedor(inValue);
+            return retVal.Body.ActualizarProveedorResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse> ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap.ActualizarProveedorAsync(ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest request) {
+            return base.Channel.ActualizarProveedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse> ActualizarProveedorAsync(int id, string nombre, string direccion, string telefono, string email) {
+            ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest inValue = new ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequest();
+            inValue.Body = new ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.nombre = nombre;
+            inValue.Body.direccion = direccion;
+            inValue.Body.telefono = telefono;
+            inValue.Body.email = email;
+            return ((ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap)(this)).ActualizarProveedorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap.ModificarProveedor(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest request) {
+            return base.Channel.ModificarProveedor(request);
+        }
+        
+        public bool ModificarProveedor(int id, string nombre, string direccion, string telefono, string email) {
+            ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest inValue = new ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest();
+            inValue.Body = new ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.nombre = nombre;
+            inValue.Body.direccion = direccion;
+            inValue.Body.telefono = telefono;
+            inValue.Body.email = email;
+            ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse retVal = ((ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap)(this)).ModificarProveedor(inValue);
+            return retVal.Body.ModificarProveedorResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse> ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap.ModificarProveedorAsync(ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest request) {
+            return base.Channel.ModificarProveedorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse> ModificarProveedorAsync(int id, string nombre, string direccion, string telefono, string email) {
+            ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest inValue = new ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequest();
+            inValue.Body = new ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorRequestBody();
+            inValue.Body.id = id;
+            inValue.Body.nombre = nombre;
+            inValue.Body.direccion = direccion;
+            inValue.Body.telefono = telefono;
+            inValue.Body.email = email;
+            return ((ProveedorSOAP_Client.ProveedorServiceReference.ProveedorWebService1Soap)(this)).ModificarProveedorAsync(inValue);
         }
     }
 }

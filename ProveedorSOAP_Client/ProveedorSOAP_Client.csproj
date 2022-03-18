@@ -73,6 +73,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\ProveedorServiceReference\ProveedorSOAP_Client.ProveedorServiceReference.ActualizarProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ProveedorServiceReference\ProveedorSOAP_Client.ProveedorServiceReference.AgregarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -80,6 +83,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProveedorServiceReference\ProveedorSOAP_Client.ProveedorServiceReference.GetProveedorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProveedorServiceReference\ProveedorSOAP_Client.ProveedorServiceReference.ModificarProveedorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProveedorServiceReference\ProveedorSOAP_Client.ProveedorServiceReference.ObtenerProveedorResponse.datasource">

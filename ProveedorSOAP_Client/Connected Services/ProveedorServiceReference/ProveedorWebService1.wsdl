@@ -71,6 +71,42 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="ActualizarProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarProveedorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarProveedor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificarProveedorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModificarProveedorResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="GetProveedorSoapIn">
@@ -97,6 +133,18 @@
   <wsdl:message name="BorrarProveedorSoapOut">
     <wsdl:part name="parameters" element="tns:BorrarProveedorResponse" />
   </wsdl:message>
+  <wsdl:message name="ActualizarProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificarProveedorSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ModificarProveedorSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificarProveedorResponse" />
+  </wsdl:message>
   <wsdl:portType name="ProveedorWebService1Soap">
     <wsdl:operation name="GetProveedor">
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Devuelve la lista de Proveedores</wsdl:documentation>
@@ -117,6 +165,16 @@
       <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Eliminar un Proveedor</wsdl:documentation>
       <wsdl:input message="tns:BorrarProveedorSoapIn" />
       <wsdl:output message="tns:BorrarProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modificar un Proveedor</wsdl:documentation>
+      <wsdl:input message="tns:ActualizarProveedorSoapIn" />
+      <wsdl:output message="tns:ActualizarProveedorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificarProveedor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Actualizar Un Proveedor</wsdl:documentation>
+      <wsdl:input message="tns:ModificarProveedorSoapIn" />
+      <wsdl:output message="tns:ModificarProveedorSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ProveedorWebService1Soap" type="tns:ProveedorWebService1Soap">
@@ -157,6 +215,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <soap:operation soapAction="http://tempuri.org/ActualizarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarProveedor">
+      <soap:operation soapAction="http://tempuri.org/ModificarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ProveedorWebService1Soap12" type="tns:ProveedorWebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -189,6 +265,24 @@
     </wsdl:operation>
     <wsdl:operation name="BorrarProveedor">
       <soap12:operation soapAction="http://tempuri.org/BorrarProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarProveedor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarProveedor">
+      <soap12:operation soapAction="http://tempuri.org/ModificarProveedor" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
